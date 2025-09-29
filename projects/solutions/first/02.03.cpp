@@ -31,6 +31,7 @@ int main() {
         [[likely]] case '7':
         [[likely]] case '8':
         [[likely]] case '9':
+        // [[likely]] case '0' ... '9':
             std::cout << "number" << std::endl;
             break;
 
@@ -60,6 +61,7 @@ int main() {
         case 'X':
         case 'Y':
         case 'Z':
+        // [[likely]] case 'A' ... 'Z':
             std::cout << "uppercase letter" << std::endl;
             break;
 
@@ -89,10 +91,11 @@ int main() {
         case 'x':
         case 'y':
         case 'z':
+        // [[likely]] case 'a' ... 'z':
             std::cout << "lowercase letter" << std::endl;
             break;
 
-        [[likely]] default:
+        [[unlikely]] default:
             std::cout << "other" << std::endl;
             break;
         }
